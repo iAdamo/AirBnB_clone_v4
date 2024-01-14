@@ -18,7 +18,6 @@ import json
 import os
 import pep8
 import unittest
-from models import storage
 FileStorage = file_storage.FileStorage
 classes = {"Amenity": Amenity, "BaseModel": BaseModel, "City": City,
            "Place": Place, "Review": Review, "State": State, "User": User}
@@ -118,20 +117,23 @@ class TestFileStorage(unittest.TestCase):
     @unittest.skipIf(models.storage_t == 'db', "not testing file storage")
     def test_get(self):
         """ Tests method for obtaining an instance file storage"""
-        dic = {"name": "Cundinamarca"}
+        storage = FileStorage()
+        dic = {"name": "Vecindad"}
         instance = State(**dic)
         storage.new(instance)
         storage.save()
+        storage = FileStorage()
         get_instance = storage.get(State, instance.id)
         self.assertEqual(get_instance, instance)
 
     @unittest.skipIf(models.storage_t == 'db', "not testing file storage")
     def test_count(self):
         """ Tests count method file storage """
+        storage = FileStorage()
         dic = {"name": "Vecindad"}
         state = State(**dic)
         storage.new(state)
-        dic = {"name": "Mexico", "state_id": state.id}
+        dic = {"name": "Mexico"}
         city = City(**dic)
         storage.new(city)
         storage.save()
