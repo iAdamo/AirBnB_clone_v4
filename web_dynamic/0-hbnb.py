@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """A python script that starts a Flask web app listening on 0.0.0.0, port 5000
 """
-from ctypes.wintypes import PLARGE_INTEGER
+import uuid
 from models import storage
 from flask import Flask, render_template
 from models.state import State
@@ -17,8 +17,9 @@ def teardown(exception):
     """A method to remove the current SQLAlchemy Session
     """
     storage.close()
-    
-@app.route('/hbnb', strict_slashes=False)
+
+
+@app.route('/0-hbnb', strict_slashes=False)
 def hbnb_filter():
     """display a HTML page
     """
@@ -26,20 +27,21 @@ def hbnb_filter():
     cities = storage.all(City).values()
     amenities = storage.all(Amenity).values()
     places = storage.all(Place).values()
-    
+
     states = sorted(states, key=lambda state: state.name)
     for state in states:
         state.cities = sorted(state.cities, key=lambda city: city.name)
     cities = sorted(cities, key=lambda city: city.name)
     amenities = sorted(amenities, key=lambda amenity: amenity.name)
     places = sorted(places, key=lambda place: place.name)
-    
-    
-    
-    return render_template('100-hbnb.html', states=states, amenities=amenities, places=places)
+
+    return render_template(
+        '0-hbnb.html',
+        states=states,
+        amenities=amenities,
+        places=places,
+        cache_id=str(uuid.uuid4()))
 
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
-    
-    
