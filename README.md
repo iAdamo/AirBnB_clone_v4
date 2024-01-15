@@ -35,10 +35,10 @@ The first piece is to manipulate a powerful storage system. This storage engine 
 This abstraction will also allow to change the type of storage easily without updating all of its codebase.
 
 <a href=#>
-    <img src="https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2018/6/815046647d23428a14ca.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20240107%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240107T142206Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=644fd085a55d70ef6cafb131fa617164fcfbb486dbf5cc09ca496eae20cded81" alt="console">
+    <img src="https://github.com/iAdamo/AirBnB_clone_v3/assets/106432903/6edc811d-0009-4a20-936a-7b31d766f331" width=50% alt="console">
 </a>
 
-<center> <h2>General Use</h2> </center>
+### General Use
 
 1. First clone this repository.
 
@@ -53,7 +53,7 @@ This abstraction will also allow to change the type of storage easily without up
 5. This prompt designates you are in the "HBnB" console. There are a variety of commands available within the console program.
 
 
-##### Commands
+### Commands
     * create - Creates an instance based on given class
 
     * destroy - Destroys an object based on class and UUID
@@ -67,7 +67,7 @@ This abstraction will also allow to change the type of storage easily without up
     * quit - Exits the program (EOF will as well)
 
 
-##### Alternative Syntax
+### Alternative Syntax
 Users are able to issue a number of console command using an alternative syntax:
 
     Usage: <class_name>.<command>([<id>[name_arg value_arg]|[kwargs]])
@@ -85,8 +85,9 @@ Advanced syntax is implemented for the following commands:
 
 <br>
 <br>
-<center> <h2>Examples</h2> </center>
-<h3>Primary Command Syntax</h3>
+
+### Examples
+#### Primary Command Syntax
 
 ###### Example 0: Create an object
 Usage: create <class_name>
@@ -157,10 +158,14 @@ Usage: <class_name>.update(<_id>, <dictionary>)
 (hbnb) User.all()
 (hbnb) ["[User] (98bea5de-9cb0-4d78-8a9d-c4de03521c30) {'updated_at': datetime.datetime(2020, 2, 19, 21, 47, 29, 134362), 'name': 'Fred the Frog', 'age': 9, 'id': '98bea5de-9cb0-4d78-8a9d-c4de03521c30', 'created_at': datetime.datetime(2020, 2, 19, 21, 47, 29, 134343)}"]
 ```
-<br>
 
- ## [**Web static**](https://github.com/iAdamo/AirBnB_clone_v2/tree/main/web_static)
- **`HTML`** **`CSS`** **`Front-end`**
+
+## [**Web static**](https://github.com/iAdamo/AirBnB_clone_v2/tree/main/web_static)
+**`HTML`** **`CSS`** **`Front-end`**
+
+<a href=#>
+    <img src="https://github.com/iAdamo/AirBnB_clone_v3/assets/106432903/e6ecf9a9-6194-42c8-9e21-7cdd2e4ab2dd" width=50% alt="web_static">
+</a>
 
 Now that there is a command interpreter for managing the AirBnB objects, it’s time to make them alive!
 
@@ -179,7 +184,11 @@ We manipulated HTML and CSS languages. HTML is the structure of the page, it sho
 ## [**MySQL storage**](https://github.com/iAdamo/AirBnB_clone_v2)
 **`Python`** **`OOP`** **`Back-end`** **`SQL`** **`MySQL`** **`ORM`** **`SQLAlchemy`**
 
-In this project, you will link two amazing worlds: Databases and Python!
+<a href=#>
+    <img src="https://github.com/iAdamo/AirBnB_clone_v3/assets/106432903/94462649-e0c4-4e75-bc86-3f17df420eed" width=50% alt="storage">
+</a>
+
+In this project, we will link two amazing worlds: Databases and Python!
 - replace the file storage by a Database storage
 - map your models to a table in database by using an O.R.M.
 
@@ -204,20 +213,126 @@ This concept is important: execute commands locally or remotely. Locally means i
 
 Fabric is taking care of all network connections (SSH, SCP etc.), it’s an easy tool for transferring, executing, etc. commands from locale to a remote server.
 
-## [**Web framework**](https://github.com/iAdamo/AirBnB_clone_v2)
+## [**Web framework - templating**](https://github.com/iAdamo/AirBnB_clone_v2)
 **`Python`** **`Back-end`** **`Webserver`** **`Flask`**
+
 A web framework is a software framework designed to aid the development of web applications, including web services, web resources, and web APIs. It provides a structure and a set of tools for building and managing web applications, making it easier for developers to create robust and scalable web projects.
 
 <a href=#>
-    <img src="https://s3.amazonaws.com/intranet-projects-files/concepts/74/hbnb_step3.png" alt="flask">
+    <img src="https://s3.amazonaws.com/intranet-projects-files/concepts/74/hbnb_step3.png" width=50% alt="flask">
 </a>
 
 ## [**RESTful API**](https://github.com/iAdamo/AirBnB_clone_v3)
-
 **`Python`** **`Back-end`** **`API`** **`Webserver`** **`Flask`**
-<!-- To be Updated !-->
+- expose all your objects stored via a JSON web interface
+- manipulate your objects via a RESTful API
+
+<a href=#>
+    <img src="https://github.com/iAdamo/AirBnB_clone_v3/assets/106432903/cfb48431-f537-40cd-a0ea-aa7d3c5d2644" width=50% alt="flask">
+</a>
+
+REST API is a software architectural style for Backend.
+
+**`REST = “REpresentational State Transfer”. API = Application Programming Interface`**
+
+Its purpose is to induce performance, scalability, simplicity, modifiability, visibility, portability, and reliability.
+
+REST API is **Resource-based**, a resource is an object and can be access by a URI. An object is “displayed”/transferred via a **representation** (typically JSON). HTTP methods will be actions on a resource.
+
+Example:
+
+- Resource: Person (John)
+- Service: contact information (GET)
+- Representation:
+    - first_name, last_name, date_of_birth
+    - JSON format
+
+### RESTful API Constraints
+
+#### 1. Uniform Interface
+- Define the interface between client-server
+- Simple and can be split into small parts
+- HTTP verbs
+  - **GET:** Read representation of a resource or a list of resources
+  - **POST:** Create a new resource
+  - **PUT:** Update an existing resource
+  - **DELETE:** Remove an existing resource
+
+##### URIs - resource name
+A resource representation is accessible by a URI:
+- `GET /users`: path for listing all user resources
+- `GET /users/12`: path for the user id = 12
+- `GET /users/12/addresses`: path for listing all addresses of the user id = 12
+- `POST /users`: path for creating a user resource
+- `PUT /users/12`: path for updating the user id = 12
+- `DELETE /users/12/addresses/2`: path for deleting the address id = 2 of the user id = 12
+
+##### HTTP Response
+In the HTTP Response, the client should verify the information of two things:
+- **status code:** result of the action
+- **body:** JSON or XML representation of resources
+
+Some important status codes:
+- `200`: OK
+- `201`: created => after a `POST` request
+- `204`: no content => can be returned after a `DELETE` request
+- `400`: bad request => the server doesn’t understand the request
+- `401`: unauthorized => client user can’t be identified
+- `403`: forbidden => client user is identified but not allowed to access a resource
+- `404`: not found => resource doesn’t exist
+- `500`: internal server error
+
+#### 2. Stateless
+
+- The server is independent of the client.
+- The server doesn’t store user client information/state.
+- Each request contains enough context to process it (HTTP Headers, etc.)
+  
+#### 3. Cacheable
+
+- All server responses (resource representation) are cacheable:
+  - Explicit
+  - Implicit
+  - Negotiated
+- Caches are here to improve performances.
+- In a REST API, clients don’t care about the caching strategy, if the resource representation comes from a cache or from a database…
+
+#### 4. Client-Server
+
+- REST API is designed to separate Client from the Server.
+- The server doesn’t know who is talking to it.
+- Clients are not concerned with data storage => the portability of client code is improved.
+- Servers are not concerned with the user interface or user state so that servers can be simpler and more scalable
+
+#### 5. Layered System
+
+- Client can’t assume direct connection to server.
+- Intermediary servers may improve system scalability by enabling load-balancing and by providing shared caches.
+- Layers may also enforce security policies.
+
+#### 6. Code on Demand (optional)
+
+- Server can temporarily:
+  - Transfer logic to client
+  - Allow client to execute logic
+- Example: JavaScript
+
+## [**Web dynamic**](https://github.com/iAdamo/AirBnB_clone_v3)
+**`Python`** **`Front-end`** **`JavaScript`**
+- JQuery
+- Load objects from the client side by using your own RESTful API
+
+<a href=#>
+    <img src="https://github.com/iAdamo/AirBnB_clone_v3/assets/106432903/e18b8b12-e53d-4a74-a8cd-f1504147fc7d" width=50% alt="flask">
+</a>
 
 
-### Collaborators:
+
+### **`Collaborators:`**
 * [**Adam Sanusi Babatunde**](https://github.com/iAdamo)
-* [**Linda Nwanchukwu**](https://github.com/lyndha)
+* [**Olaoluwa Hassan**](https://github.com/hassanyoung1)
+* [**Linda Ihuoma Nwanchukwu**](https://github.com/lyndha)
+* [**Mary Tolulope Bakare**](https://github.com/MercifulMary)
+
+
+### **`Author:`** [Adam Sanusi Babatunde](https://github.com/iAdamo)

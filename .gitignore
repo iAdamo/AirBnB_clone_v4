@@ -1,0 +1,13 @@
+a
+b
+*.swo
+*.swp
+venv
+__pycache__
+*.json
+*.pyc
+hbnb
+0-transfer*
+fabfile*
+gg
+hh
