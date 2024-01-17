@@ -30,7 +30,7 @@ $.ajax({
   type: 'POST',
   contentType: 'application/json',
   data: JSON.stringify({}),
-  success: function(data) {
+  success: function (data) {
     for (const place of data) {
       const article = `
         <article>
